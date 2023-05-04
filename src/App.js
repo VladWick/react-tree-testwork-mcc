@@ -1,7 +1,7 @@
 import './App.css';
 
 import Header from './components/Header';
-import TreeList from './components/Tree/TreeList';
+import TreeList from './components/TreeList';
 
 function App() {
     return (

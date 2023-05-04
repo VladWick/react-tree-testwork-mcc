@@ -1,15 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import {FaCaretRight, FaEdit, FaRegWindowClose, FaPlus, FaCaretDown} from "react-icons/fa" 
+import { FaCaretRight, FaEdit, FaRegWindowClose, FaPlus } from "react-icons/fa" 
 
 import Tree from './Tree';
 
+import { hasChildren } from "../utils/functions";
+
 const TreeNode = ({ node, deleteByKey }) => {
     const [childVisible, setChildVisiblity] = useState(false);
-
-    // useEffect(() => {
-
-    // }, []);
 
     const addNode = () => {
         const nodeLabel = prompt("Enter the new node: ");
@@ -48,10 +46,11 @@ const TreeNode = ({ node, deleteByKey }) => {
             <div className="tree-node-head" onClick={() => clickNode()}>
                 <div className="node-text">
                     <div className="caret">
-                        { childVisible ? 
-                            <FaCaretDown /> : 
-                            <FaCaretRight />
-                        }
+                        { hasChildren(node.children) && (
+                            <div className={`${ childVisible ? "active-rotate" : ""}`}>
+                                <FaCaretRight />
+                            </div>
+                        )}
                     </div>
                     {node.label}
                 </div>

@@ -12,8 +12,7 @@ export function isTreeEmpty(tree) {
 
 export function hasChildren(children) {
     if(children) {
-        if(children != []) {
-            console.log(children)
+        if(children.length !== 0) {
             return true;
         }
         return false;

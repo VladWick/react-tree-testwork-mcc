@@ -89,3 +89,13 @@ body {
 .tree-children-nodes-container {
     list-style: none;
 }
+
+/*  */
+
+.rotate .active {
+    transform: rotate(45deg);
+}
+
+.active-rotate {
+    transform: rotate(45deg);
+}

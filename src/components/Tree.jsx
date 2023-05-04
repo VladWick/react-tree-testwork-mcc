@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import TreeNode from './TreeNode';
 
-import {isTreeEmpty} from "../../utils/functions";
+import { isTreeEmpty } from "../utils/functions";
 
 const Tree = ({ data = [] }) => {
     const [tree, setTree] = useState([]);
@@ -18,7 +18,7 @@ const Tree = ({ data = [] }) => {
                 if(tree[i].key === element.key) {
                     delete tree[i];
                     break;
-                }    
+                }
             }
         }
         setTree()

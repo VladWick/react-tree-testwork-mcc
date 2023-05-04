@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-import defaultData from "../../utils/data/defaultData";
-import fileSystemData from "../../utils/data/fileSystemData";
-import largeData from "../../utils/data/largeData";
+import defaultData from "../utils/data/defaultData";
+import fileSystemData from "../utils/data/fileSystemData";
+import largeData from "../utils/data/largeData";
 
-import {isTreeEmpty} from "../../utils/functions";
+import { isTreeEmpty } from "../utils/functions";
 
 import Tree from './Tree';
 
